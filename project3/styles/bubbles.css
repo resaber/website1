@@ -1,0 +1,119 @@
+#background-wrap {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  /* 可以點選z-index下層的元素 */
+  pointer-events: none;
+}
+.bubble {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 30px 5px rgb(102, 224, 243);
+}
+/* lifeplan bubble */
+.bubble2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 30px 5px rgb(245, 103, 26);
+}
+
+@keyframes animatedBubblesYaxies {
+  0% {
+    margin-top: 1000px;
+  }
+  100% {
+    margin-top: -100%;
+  }
+}
+@keyframes animatedBubblesXaxies {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+.x1 {
+  /* linear -timeing fuction等速運作 animation簡寫屬性，
+  可將六個屬性合併一個簡寫 animation-name -duration 
+  timing-function -delay -iteration-count -direction*/
+  animation: animatedBubblesYaxies 25s linear infinite,
+    animatedBubblesXaxies 2s ease-in-out infinite alternate;
+  /* 初始位置和泡泡大小 */
+  left: -5%;
+  top: 40%;
+  transform: scale(0.6);
+}
+
+.x2 {
+  animation: animatedBubblesYaxies 20s linear infinite,
+    animatedBubblesXaxies 4s ease-in-out infinite alternate;
+  left: 5%;
+  top: 80%;
+  transform: scale(0.4);
+}
+.x3 {
+  animation: animatedBubblesYaxies 28s linear infinite,
+    animatedBubblesXaxies 2s ease-in-out infinite alternate;
+  left: 10%;
+  top: 40%;
+  transform: scale(0.7);
+}
+.x4 {
+  animation: animatedBubblesYaxies 22s linear infinite,
+    animatedBubblesXaxies 3s ease-in-out infinite alternate;
+  left: 20%;
+  top: 0%;
+  transform: scale(0.3);
+}
+.x5 {
+  animation: animatedBubblesYaxies 29s linear infinite,
+    animatedBubblesXaxies 4s ease-in-out infinite alternate;
+  left: 30%;
+  top: 50%;
+  transform: scale(0.5);
+}
+.x6 {
+  animation: animatedBubblesYaxies 21s linear infinite,
+    animatedBubblesXaxies 2s ease-in-out infinite alternate;
+  left: 50%;
+  top: 0%;
+  transform: scale(0.8);
+}
+.x7 {
+  animation: animatedBubblesYaxies 20s linear infinite,
+    animatedBubblesXaxies 2s ease-in-out infinite alternate;
+  left: 65%;
+  top: 70%;
+  transform: scale(0.4);
+}
+.x8 {
+  animation: animatedBubblesYaxies 22s linear infinite,
+    animatedBubblesXaxies 3s ease-in-out infinite alternate;
+  left: 80%;
+  top: 10%;
+  transform: scale(0.3);
+}
+.x9 {
+  animation: animatedBubblesYaxies 29s linear infinite,
+    animatedBubblesXaxies 4s ease-in-out infinite alternate;
+  left: 90%;
+  top: 50%;
+  transform: scale(0.6);
+}
+.x10 {
+  animation: animatedBubblesYaxies 26s linear infinite,
+    animatedBubblesXaxies 2s ease-in-out infinite alternate;
+  left: 80%;
+  top: 80%;
+  transform: scale(0.3);
+}

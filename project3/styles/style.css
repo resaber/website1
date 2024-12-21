@@ -1,0 +1,222 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+body nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+body nav ul {
+  display: flex;
+}
+body nav ul li {
+  /*
+  none：無標記
+  disc：實心圓點（預設值）
+  circle：空心圓點
+  square：實心方塊
+  decimal：數字（1, 2, 3, ...）
+  lower-alpha：小寫字母（a, b, c, ...）
+  upper-alpha：大寫字母（A, B, C, ...）
+  */
+  list-style-type: none;
+  margin: 1rem;
+}
+body nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+body nav ul li a:hover {
+  color: rgb(229, 167, 87);
+}
+body main section.main-area {
+  min-height: 70vh;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.main-area div.info {
+  flex-basis: 400px;
+  padding: 1rem;
+}
+body main section.main-area div.info h1 {
+  font-size: 3.5rem;
+}
+body main section.main-area div.info h2 {
+  font-size: 1rem;
+}
+body main section.main-area div.info a {
+  color: white;
+  background-color: rgb(229, 167, 87);
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+body main section.main-area div.info a:hover {
+  scale: 1.2;
+  background-color: rgb(248, 57, 57);
+}
+body main section.main-area div.img {
+  flex-basis: 400px;
+}
+body main section.main-area div.img img {
+  width: 100%;
+}
+body main section.about {
+  background-color: rgb(245, 211, 147);
+  padding: 2rem, 0rem;
+  display: flex;
+  justify-content: center;
+}
+body main section.about section.description {
+  width: 50%;
+  text-align: center;
+}
+body main section.about section.description h2 {
+  font-size: 2rem;
+}
+body main section.about section.description .progress-bar-area p {
+  margin-top: 1rem;
+}
+body main section.resume {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+body main section.resume section.table {
+  flex: 5 0 500px;
+  padding: 2rem;
+}
+body main section.resume section.table table {
+  --bs-table-bg: transparent;
+  border-collapse: collapse;
+}
+body main section.resume section.table tr {
+  border-bottom: 2px solid rgb(1, 146, 243);
+  transition: all 0.5s ease-in;
+}
+body main section.resume section.table tr:hover {
+  background-color: rgb(20, 134, 209);
+  color: white;
+}
+body main section.resume section.table td {
+  padding: 1rem;
+}
+body main section.resume section.picture {
+  flex: 3 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body main section.resume section.picture img {
+  width: 80%;
+  height: auto;
+}
+body main section.resume section.picture div.Rect2 {
+  width: 30vw;
+  height: 90vh;
+  border: 10px solid rgb(130, 192, 234);
+  position: absolute;
+  top: 300px;
+  left: -300px;
+  z-index: -1;
+}
+body main section.resume section.picture div.Rect1 {
+  width: 50vw;
+  height: 90vh;
+  border: 10px solid rgb(130, 192, 234);
+  position: absolute;
+  top: 30px;
+  left: 220px;
+  z-index: -1;
+}
+body main section.resume section.picture div.Rect3 {
+  width: 30vw;
+  height: 90vh;
+  border: 10px solid rgb(130, 192, 234);
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  z-index: -1;
+}
+body main .motivation {
+  background-color: rgb(103, 242, 177);
+}
+body main section.progressLearing {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main section.progressLearing h1 {
+  font-size: 1.5rem;
+}
+body main section.progressLearing h2 {
+  font-size: 1.2rem;
+}
+body main section.progressLearing a {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+body main section.progressLearing a:hover {
+  scale: 1.2;
+}
+body main section.timeAllocation {
+  background-color: beige;
+}
+body main section.dealWithEmotions {
+  background-color: rgb(97, 191, 238);
+}
+body main section.myjobAndSociety {
+  background-color: rgb(220, 240, 147);
+}
+body main section.tellSomething {
+  background-color: rgba(250, 147, 2, 0.3);
+}
+
+@media screen and (max-width: 800px) {
+  body main section.about section.description {
+    width: 80%;
+  }
+  body main section.resume {
+    overflow-x: auto;
+  }
+  body main section.resume section.picture div.Rect1,
+  body main section.resume section.picture div.Rect2,
+  body main section.resume section.picture div.Rect3 {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  body nav {
+    position: static;
+  }
+  body nav ul {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

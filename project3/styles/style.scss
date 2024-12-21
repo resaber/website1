@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: normal;
+}
+
+body {
+  //防止底下照片淡藍色線條的scrollbar出現
+  overflow-x: hidden;
+  nav {
+    background-color: white;
+    //sticky固定網頁
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    ul {
+      //讓li子元素並排
+      display: flex;
+      li {
+        /*
+        none：無標記
+        disc：實心圓點（預設值）
+        circle：空心圓點
+        square：實心方塊
+        decimal：數字（1, 2, 3, ...）
+        lower-alpha：小寫字母（a, b, c, ...）
+        upper-alpha：大寫字母（A, B, C, ...）
+        */
+        list-style-type: none;
+        margin: 1rem;
+        a {
+          color: black;
+          text-decoration: none;
+          transition: all 0.5s ease-in;
+          &:hover {
+            color: rgb(229, 167, 87);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section.main-area {
+      min-height: 70vh;
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      div.info {
+        flex-basis: 400px;
+
+        // border: 2px solid black;
+        padding: 1rem;
+        h1 {
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 1rem;
+        }
+        a {
+          color: white;
+          background-color: rgb(229, 167, 87);
+          padding: 0.25rem 0.5rem;
+          font-size: 1.5rem;
+          border-radius: 20px;
+          display: inline-block;
+          margin-top: 1rem;
+          text-decoration: none;
+          transition: all 0.5s ease-in;
+          &:hover {
+            scale: 1.2;
+            background-color: rgb(248, 57, 57);
+          }
+        }
+      }
+
+      div.img {
+        flex-basis: 400px;
+        // height: 450px;
+        // border: 2px solid rgb(248, 57, 57);
+        img {
+          width: 100%;
+        }
+      }
+    }
+    section.about {
+      background-color: rgb(245, 211, 147);
+      padding: 2rem, 0rem;
+      display: flex;
+      justify-content: center;
+
+      section.description {
+        width: 50%;
+        text-align: center;
+
+        // lifeplan div style
+        h2 {
+          font-size: 2rem;
+        }
+        .progress-bar-area {
+          p {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+    section.resume {
+      // position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+
+      section.table {
+        flex: 5 0 500px;
+        padding: 2rem;
+        table {
+          --bs-table-bg: transparent;
+          border-collapse: collapse;
+        }
+
+        tr {
+          border-bottom: 2px solid rgb(1, 146, 243);
+          transition: all 0.5s ease-in;
+          &:hover {
+            background-color: rgb(20, 134, 209);
+            color: white;
+          }
+        }
+        td {
+          padding: 1rem;
+        }
+      }
+      section.picture {
+        // border: 1px solid black;
+        flex: 3 1 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        img {
+          width: 80%;
+          height: auto;
+        }
+        div.Rect2 {
+          width: 30vw;
+          height: 90vh;
+          border: 10px solid rgb(130, 192, 234);
+          position: absolute;
+          top: 300px;
+          left: -300px;
+          z-index: -1;
+        }
+
+        div.Rect1 {
+          width: 50vw;
+          height: 90vh;
+          border: 10px solid rgb(130, 192, 234);
+          position: absolute;
+          top: 30px;
+          left: 220px;
+          z-index: -1;
+        }
+
+        div.Rect3 {
+          width: 30vw;
+          height: 90vh;
+          border: 10px solid rgb(130, 192, 234);
+          position: absolute;
+          top: 0px;
+          left: -100px;
+          z-index: -1;
+        }
+      }
+    }
+    //lifeplan
+    .motivation {
+      background-color: rgb(103, 242, 177);
+    }
+    section.progressLearing {
+      display: flex;
+      flex-wrap: wrap;
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      a {
+        display: inline-block;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: all 0.5s ease-in;
+        &:hover {
+          scale: 1.2;
+        }
+      }
+    }
+    section.timeAllocation {
+      background-color: beige;
+    }
+
+    section.dealWithEmotions {
+      background-color: rgb(97, 191, 238);
+    }
+    section.myjobAndSociety {
+      background-color: rgb(220, 240, 147);
+    }
+    section.tellSomething {
+      background-color: rgba(250, 147, 2, 0.3);
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    main {
+      section.about {
+        section.description {
+          width: 80%;
+        }
+      }
+      section.resume {
+        //螢幕寬度小於800px時，overflow-x: auto;可以讓畫面左右滑動而不影響上面的排版
+        overflow-x: auto;
+        section.picture {
+          div.Rect1,
+          div.Rect2,
+          div.Rect3 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    nav {
+      position: static;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}
