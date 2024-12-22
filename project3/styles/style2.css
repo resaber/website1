@@ -272,10 +272,11 @@ body main section.technologyNote {
   z-index: 1;
 }
 body main section.technologyNote .noteHeader {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
+  padding: 1rem;
   width: 70%;
-  height: 10vh;
+  height: auto;
   border-radius: 40px;
   background-color: rgb(92, 115, 170);
   text-align: center;
@@ -309,10 +310,11 @@ body main section.myjobAndSociety {
   border-radius: 30px;
 }
 body main section.myjobAndSociety .attactSociety {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
+  padding: 1rem;
   width: 70%;
-  height: 15vh;
+  height: auto;
   border-radius: 90px;
   background-color: lemonchiffon;
   text-align: center;
@@ -342,10 +344,11 @@ body main .tellSomething {
   border-radius: 30px;
 }
 body main .tellSomething .tellToBootcamps {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
+  padding: 1rem;
   width: 60%;
-  height: 15vh;
+  height: auto;
   border-radius: 60px;
   background-color: lightblue;
   text-align: center;

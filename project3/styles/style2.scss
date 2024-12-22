@@ -295,10 +295,11 @@ body {
       margin: 0 0.5rem;
       z-index: 1;
       .noteHeader {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
+        padding: 1rem;
         width: 70%;
-        height: 10vh;
+        height: auto;
         border-radius: 40px;
         background-color: rgb(92, 115, 170);
         //noteHeader本身及他所有包含的子元素文字統一置中，懶得再打一個h1
@@ -335,10 +336,11 @@ body {
       margin: 1rem 0.5rem;
       border-radius: 30px;
       .attactSociety {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
+        padding: 1rem;
         width: 70%;
-        height: 15vh;
+        height: auto;
         border-radius: 90px;
         background-color: lemonchiffon;
         text-align: center;
@@ -371,10 +373,11 @@ body {
       border-radius: 30px;
 
       .tellToBootcamps {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
+        padding: 1rem;
         width: 60%;
-        height: 15vh;
+        height: auto;
         border-radius: 60px;
         background-color: lightblue;
         text-align: center;
