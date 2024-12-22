@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: normal;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+body {
+  overflow-x: hidden;
+  nav {
+    background-color: white;
+    //sticky固定網頁
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    ul {
+      //讓li子元素並排
+      display: flex;
+      li {
+        /*
+        none：無標記
+        disc：實心圓點（預設值）
+        circle：空心圓點
+        square：實心方塊
+        decimal：數字（1, 2, 3, ...）
+        lower-alpha：小寫字母（a, b, c, ...）
+        upper-alpha：大寫字母（A, B, C, ...）
+        */
+        list-style-type: none;
+        margin: 1rem;
+        a {
+          color: black;
+          text-decoration: none;
+          transition: all 0.5s ease-in;
+          &:hover {
+            color: rgb(229, 167, 87);
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    section.about2 {
+      //   background-color: rgb(245, 211, 147);
+      padding: 2rem, 0rem;
+      display: flex;
+      justify-content: center;
+      overflow: visible;
+      section.description2 {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: blanchedalmond;
+        justify-content: center;
+        // display: flex;
+        .motivation {
+          display: inline-block;
+          width: 50%;
+          //   height: 100px; // 設置高度，確保寬度和高度相等
+          margin: 0rem;
+          padding: rem;
+          border-radius: 20px; // 設置圓角，變成圓形
+          text-align: center;
+          background-color: rgb(103, 242, 177);
+        }
+      }
+    }
+    section.progressLearning {
+      display: flex;
+      flex-wrap: wrap;
+
+      .textContent {
+        flex: 1 1 550px; // 設置文字部分的寬度
+        background-color: #8aeef8;
+        padding: 1rem;
+        border-radius: 30px;
+        margin: 0.5rem; // 設置項目之間的間距
+        position: relative;
+
+        h1 {
+          display: flex;
+          align-items: center;
+          position: relative; // 設置相對定位，讓子元素的絕對定位相對於 h1
+          &::after {
+            i {
+              margin-left: 0.5rem;
+              position: absolute; // 設置絕對定位
+              right: 0; // h1右側開始
+            }
+          }
+        }
+        h2 {
+          margin-top: 1rem;
+        }
+      }
+
+      .game-links {
+        flex: 1 1 300px; // 設置遊戲連結部分的寬度
+        background-color: #b3ece0;
+        padding: 1rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; // 設置連結之間的間距
+        margin: 0.5rem; // 設置項目之間的間距
+
+        a {
+          display: inline-block;
+          font-size: 1.5rem;
+          text-decoration: none;
+          transition: all 0.5s ease-in;
+          &:hover {
+            scale: 1.2;
+          }
+        }
+      }
+    }
+
+    section.timeAllocation {
+      display: flex;
+      flex-wrap: wrap;
+
+      padding: 2rem;
+      background-color: #1ea3eb;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 1rem 0;
+      justify-content: center;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .circleContainer {
+        display: flex;
+        justify-content: space-around; // 讓圓圈在容器內均勻分佈
+        width: 100%; // 確保容器寬度為 100%
+        flex-wrap: wrap;
+      }
+      img {
+        width: auto; // 設置圖片寬度
+        height: auto; // 自動調整高度
+        margin: 0 0.5rem; // 設置圖片左右外邊距
+      }
+
+      @media (max-width: 768px) {
+        .circleContainer {
+          flex-direction: column; // 當視窗寬度小於 768px 時，將圓圈由上到下顯示
+          align-items: center;
+        }
+        // 垂直方向上置中
+        .circleContainer img {
+          transform: rotate(90deg); // 將箭頭圖片旋轉 90 度，變成向下
+          margin: 0.5rem 0; // 調整圖片的上下外邊距
+        }
+      }
+
+      .circle {
+        width: 250px; // 設置圓圈的寬度
+        height: 250px; // 設置圓圈的高度
+        border-radius: 50%; // 設置圓角，變成圓形
+        background-color: #e9b65d;
+        border: 1px solid #040404;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0.5rem; // 圓圈之間的距離
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        h2 {
+          font-size: 1.2rem;
+          margin: 0;
+          word-wrap: break-word; // 當內容過長時自動換行
+          overflow: hidden; // 隱藏超出圓圈的內容
+        }
+      }
+    }
+    section.decideChooseReturn {
+      background-color: rgba($color: #81f4d1, $alpha: 0.4);
+      border-radius: 20px;
+    }
+  }
+}
+
+.fa-solid.fa-arrow-right.fa-2xl {
+  // position: absolute;
+  animation: animatedArrowXaxies 2s infinite;
+}
+@keyframes animatedArrowXaxies {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% - 1rem));
+  }
+}
+@media screen and (max-width: 1200px) {
+  .fa-solid.fa-arrow-right.fa-2xl {
+    display: none; // 取消動畫效果
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    nav {
+      position: static;
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}

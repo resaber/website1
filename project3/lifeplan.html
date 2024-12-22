@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/bubbles.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style2.css" />
   </head>
   <body>
     <nav>
@@ -45,16 +45,13 @@
         <div class="bubble x7"></div>
         <div class="bubble x8"></div>
         <div class="bubble x9"></div>
-        <div class="bubble x10"></div>
+        <div class="bubbles x10"></div>
       </div>
 
-      <section style="justify-content: flex-start" class="about">
-        <section
-          style="text-align: left; justify-content: left; width: 100%"
-          class="description"
-        >
+      <section class="about2">
+        <section class="description2">
           <div class="motivation">
-            <h2>個人簡介和申請動機</h2>
+            <h1>個人簡介和申請動機</h1>
           </div>
           <h2 style="text-align: left; font-size: 1.2rem">
             我是今年一月畢業的大學生，三月當兵，在七月當完兵後在台北從事一些舉辦活動方的兼職工作人員，
@@ -77,17 +74,28 @@
           </h2>
         </section>
       </section>
-      <section class="progressLearing">
-        <h1>曾經做過哪些軟體工程技術相關的學習？</h1>
-        <h2>
-          我在大學畢業製作時，自學開發了一個小遊戲以vscode編寫C#，
-          搭配unity遊戲引擎製作，過程也同樣曲折困難重重，我喜歡完成時的成就感
-          有兩個小遊戲，可以download下載，資料夾裡面有個文件描述玩法及開發過程遇到的挑戰
-          我在大學時就埋下了好奇心，當時因為半工半讀，課業上沒有花很多心力研究，但是在學習過程中，
-          比如老師教導的mobirise製作網頁，我會自己去研究如何更改網頁的樣式，現在則是從
-          vscode搭載html css
-          js等前端技術，會去網路上找相關的解決辦法，最近使用上也搭載了vscode
-          掛件copilot這個AI程式碼助手，有助於遇到問題可以詢問並解決問題
+
+      <section class="progressLearning">
+        <div class="textContent">
+          <h1>
+            曾經做過哪些軟體工程技術相關的學習？
+            <i
+              class="fa-solid fa-arrow-right fa-2xl"
+              style="color: #ff0000"
+            ></i>
+          </h1>
+          <h2>
+            我在大學畢業製作時，自學開發了一個小遊戲以vscode編寫C#，
+            搭配unity遊戲引擎製作，過程也同樣曲折困難重重，我喜歡完成時的成就感
+            有兩個小遊戲，可以download下載，資料夾裡面有個文件描述玩法及開發過程遇到的挑戰
+            我在大學時就埋下了好奇心，當時因為半工半讀，課業上沒有花很多心力研究，但是在學習過程中，
+            比如老師教導的mobirise製作網頁，我會自己去研究如何更改網頁的樣式，現在則是從
+            vscode搭載html css
+            js等前端技術，會去網路上找相關的解決辦法，最近使用上也搭載了vscode
+            掛件copilot這個AI程式碼助手，有助於遇到問題可以詢問並解決問題
+          </h2>
+        </div>
+        <div class="game-links">
           <ul>
             <li>
               <a
@@ -114,27 +122,47 @@
               </a>
             </li>
           </ul>
-        </h2>
+        </div>
       </section>
 
       <section class="timeAllocation">
-        <h1 style="font-size: 1.5rem">
-          如果參與這個訓練，會怎麼安排學習時間？
-        </h1>
-        <h2 style="font-size: 1.2rem">
-          有看過課程進度每週都有對應的學習目標，內容豐富扎實，我會放下手邊的工作，
-          我會全身投入學習，一方面也想結交同學使用DC討論學習上的問題，作業的實作上如遇到些問題，組個類似讀書會的地方，大家討論學習進度，
-          整體規劃我會以一週每天至少8～10小時的學習時間，持續學習，課程預計1/6開始，有許多作業任務和每日日誌，做學習進度追蹤的指標，
-          我認為一開始打下穩固的基礎非常重要，全力以赴之餘，
-          有餘瑕多準備些之後的課程。
-        </h2>
+        <h1>如果參與這個訓練，會怎麼安排學習時間？</h1>
+        <div class="circleContainer">
+          <div class="circle">
+            <h2>
+              有看過課程進度每週都有對應的學習目標，內容豐富扎實，我會放下目前手邊的工作，
+              我會全身投入學習，一方面也想結交同學一起討論課業上的問題
+            </h2>
+          </div>
+          <img src="./ICONS/Arrow Right Icon.svg" alt="arrow" />
+          <div class="circle">
+            <h2>
+              我會以一週每天至少8～10小時的學習時間，持續學習，
+              我會透過DC群討論群或線下讀書會和同學交流加強對技能的理解
+              <br />
+              <i class="fa-brands fa-discord" style="color: white"></i>
+            </h2>
+          </div>
+          <img src="./ICONS/Arrow Right Icon.svg" alt="arrow" />
+          <div class="circle">
+            <h2>
+              過程有許多作業任務和每日日誌，每晚固定做學習日誌回顧一天所完成的進度
+              以及確認作業的方向有朝對的方向前進
+            </h2>
+          </div>
+          <img src="./ICONS/Arrow Right Icon.svg" alt="arrow" />
+          <div class="circle">
+            <h2>
+              在完善作業的流程時，有其餘時間也會先預習後面的課程內容，
+              讓自己在學習上有更多的掌握
+            </h2>
+          </div>
+        </div>
       </section>
 
       <section class="decideChooseReturn">
-        <h1 style="font-size: 1.5rem">
-          軟體技術日新月異，如何確定選擇投入的領域是正確有回報的？
-        </h1>
-        <h2 style="font-size: 1.2rem">
+        <h1 style>軟體技術日新月異，如何確定選擇投入的領域是正確有回報的？</h1>
+        <h2 style>
           有在yt上觀看一些軟體工程師的經驗分享(如矽谷工程師
           <a
             style="text-decoration: none"
@@ -148,10 +176,8 @@
         </h2>
       </section>
       <section class="dealWithEmotions">
-        <h1 style="font-size: 1.5rem">
-          請描述一件產生明顯負面情緒的經歷，如何處理該情緒？
-        </h1>
-        <h2 style="font-size: 1.2rem">
+        <h1>請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</h1>
+        <h2>
           在大學資訊中心工作階段，在和同事(也是輔大的學生)一起工作時，有時工作上會有摩擦，
           工作方式上作法不同，出現有些爭吵的情況，這情況在出社會工作後也有遇到，自己本身有冥想的習慣，
           我覺得也很適合套用在面對負面情感的時候，首先是察覺到自己的情緒，接受並旁觀它，有時候情緒放置個半小時、半天、

@@ -1,0 +1,207 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: normal;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+body nav {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+body nav ul {
+  display: flex;
+}
+body nav ul li {
+  /*
+  none：無標記
+  disc：實心圓點（預設值）
+  circle：空心圓點
+  square：實心方塊
+  decimal：數字（1, 2, 3, ...）
+  lower-alpha：小寫字母（a, b, c, ...）
+  upper-alpha：大寫字母（A, B, C, ...）
+  */
+  list-style-type: none;
+  margin: 1rem;
+}
+body nav ul li a {
+  color: black;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+body nav ul li a:hover {
+  color: rgb(229, 167, 87);
+}
+body main section.about2 {
+  padding: 2rem, 0rem;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+body main section.about2 section.description2 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: blanchedalmond;
+  justify-content: center;
+}
+body main section.about2 section.description2 .motivation {
+  display: inline-block;
+  width: 50%;
+  margin: 0rem;
+  padding: rem;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(103, 242, 177);
+}
+body main section.progressLearning {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main section.progressLearning .textContent {
+  flex: 1 1 550px;
+  background-color: #8aeef8;
+  padding: 1rem;
+  border-radius: 30px;
+  margin: 0.5rem;
+  position: relative;
+}
+body main section.progressLearning .textContent h1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+body main section.progressLearning .textContent h1::after i {
+  margin-left: 0.5rem;
+  position: absolute;
+  right: 0;
+}
+body main section.progressLearning .textContent h2 {
+  margin-top: 1rem;
+}
+body main section.progressLearning .game-links {
+  flex: 1 1 300px;
+  background-color: #b3ece0;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.5rem;
+}
+body main section.progressLearning .game-links a {
+  display: inline-block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.5s ease-in;
+}
+body main section.progressLearning .game-links a:hover {
+  scale: 1.2;
+}
+body main section.timeAllocation {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background-color: #1ea3eb;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  justify-content: center;
+}
+body main section.timeAllocation h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+body main section.timeAllocation .circleContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+body main section.timeAllocation img {
+  width: auto;
+  height: auto;
+  margin: 0 0.5rem;
+}
+@media (max-width: 768px) {
+  body main section.timeAllocation .circleContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main section.timeAllocation .circleContainer img {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+}
+body main section.timeAllocation .circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #e9b65d;
+  border: 1px solid #040404;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+body main section.timeAllocation .circle h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+body main section.decideChooseReturn {
+  background-color: rgba(129, 244, 209, 0.4);
+  border-radius: 20px;
+}
+
+.fa-solid.fa-arrow-right.fa-2xl {
+  animation: animatedArrowXaxies 2s infinite;
+}
+
+@keyframes animatedArrowXaxies {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% - 1rem));
+  }
+}
+@media screen and (max-width: 1200px) {
+  .fa-solid.fa-arrow-right.fa-2xl {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  body nav {
+    position: static;
+  }
+  body nav ul {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style2.css.map */

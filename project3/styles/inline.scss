@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem; // 設置容器底部外邊距
+}
+
+.inline-block a {
+  display: inline-block; // 設置為行內塊級元素
+  background-color: #f29b05;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none; // 移除連結下劃線
+  color: white; // 設置文字顏色
+}
+
+.inline-flex {
+  //   width: 100%;
+  //   width: auto;
+  display: inline-flex;
+  flex-wrap: wrap; // 設置為行內彈性容器
+  background-color: #1ea3eb;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+  border: 3px solid black;
+  flex-wrap: wrap; // 當空間不足時，子元素自動換行
+}
+
+.inline-flex .item {
+  background-color: #f29b05;
+  flex: 1 1 30%;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none; // 移除連結下劃線
+  color: white; // 設置文字顏色
+  border: 2px solid black;
+}
