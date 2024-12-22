@@ -59,28 +59,44 @@ body {
       display: flex;
       justify-content: center;
       overflow: visible;
+
       section.description2 {
         display: flex;
         flex-wrap: wrap;
         background-color: blanchedalmond;
+        margin: 0 0.5rem;
+        border-radius: 15px;
         justify-content: center;
         // display: flex;
         .motivation {
           display: inline-block;
+
           width: 50%;
           //   height: 100px; // 設置高度，確保寬度和高度相等
-          margin: 0rem;
-          padding: rem;
+          margin-top: 1rem;
+          padding: 0rem;
           border-radius: 20px; // 設置圓角，變成圓形
           text-align: center;
           background-color: rgb(103, 242, 177);
+          transition: all 0.5s ease-in;
+          h1 {
+            padding: 0.5rem 0;
+          }
+          &:hover {
+            h1 {
+              scale: 1.2;
+            }
+          }
+        }
+        h2 {
+          font-size: 1.5rem;
+          padding: 1rem;
         }
       }
     }
     section.progressLearning {
       display: flex;
       flex-wrap: wrap;
-
       .textContent {
         flex: 1 1 550px; // 設置文字部分的寬度
         background-color: #8aeef8;
@@ -102,6 +118,7 @@ body {
           }
         }
         h2 {
+          font-size: 1.5rem;
           margin-top: 1rem;
         }
       }
@@ -136,13 +153,14 @@ body {
       background-color: #1ea3eb;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin: 1rem 0;
+      margin: 1rem 0.5rem;
       justify-content: center;
 
       h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
       }
+
       .circleContainer {
         display: flex;
         justify-content: space-around; // 讓圓圈在容器內均勻分佈
@@ -180,18 +198,209 @@ body {
         padding: 1rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         text-align: center;
-
+        transition: all 0.5s linear;
         h2 {
           font-size: 1.2rem;
           margin: 0;
           word-wrap: break-word; // 當內容過長時自動換行
           overflow: hidden; // 隱藏超出圓圈的內容
         }
+
+        &:hover {
+          background-color: #e9b65d;
+          scale: 1.2;
+        }
       }
     }
-    section.decideChooseReturn {
-      background-color: rgba($color: #81f4d1, $alpha: 0.4);
-      border-radius: 20px;
+
+    section.outRange {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgba(229, 174, 103, 0.3);
+      padding: 1rem;
+      margin: 0 0.5rem;
+      border-radius: 22px;
+      position: relative;
+      z-index: 1;
+      section.decideChooseReturn {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(141, 231, 231, 0.4);
+        border-radius: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: auto; // 確保寬度覆蓋父容器
+        height: auto; // 確保高度覆蓋父容器
+        z-index: 1;
+        justify-content: center;
+        .software {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 75%;
+          padding: 0 0.5rem;
+          border-radius: 25px;
+          margin-bottom: 1rem;
+          background-color: rgb(182, 236, 182);
+
+          h1 {
+            text-align: center;
+          }
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    section.dealWithEmotions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 80px;
+      margin: 1rem 0.5rem;
+      background-color: rgb(89, 179, 224);
+      .emoProgress {
+        width: 70%;
+        border-radius: 25px;
+        background-color: rgb(235, 226, 145);
+        margin-top: 1rem;
+        h1 {
+          margin: 0.3rem 0.5rem;
+          text-align: center;
+        }
+      }
+      .emodetail {
+        width: 100%;
+        background-color: rgb(152, 232, 197);
+        border-radius: 40px;
+        padding: 1rem;
+        //調整外距上下各2左右0
+        margin: 1rem 0.5rem;
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    section.technologyNote {
+      // position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 25px;
+      background-color: rgb(244, 202, 138);
+      margin: 0 0.5rem;
+      z-index: 1;
+      .noteHeader {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        height: 10vh;
+        border-radius: 40px;
+        background-color: rgb(92, 115, 170);
+        //noteHeader本身及他所有包含的子元素文字統一置中，懶得再打一個h1
+        text-align: center;
+        justify-content: center; //子元素們水平置中
+        align-items: center; //子元素們垂直置中相較於noteHeader元素
+        margin-top: 1rem;
+        border: 5px solid black;
+        h1 {
+          font-size: 2.5rem;
+          color: white;
+        }
+      }
+      .notedetail {
+        border: 2px solid black;
+        border-radius: 25px;
+        border: 2px solid black;
+        // position: relative;
+        z-index: 2;
+        background-color: rgb(217, 255, 134);
+        padding: 1rem;
+        margin: 1rem;
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    section.myjobAndSociety {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: lightblue;
+      margin: 1rem 0.5rem;
+      border-radius: 30px;
+      .attactSociety {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        height: 15vh;
+        border-radius: 90px;
+        background-color: lemonchiffon;
+        text-align: center;
+        justify-content: center; //子元素們水平置中
+        align-items: center; //子元素們垂直置中相較於noteHeader元素
+        margin: 1rem;
+        border: 5px solid black;
+      }
+      .attactSocietydetail {
+        border: 2px solid black;
+        border-radius: 30px;
+        border: 2px solid black;
+        // position: relative;
+        z-index: 2;
+        background-color: rgb(217, 255, 134);
+        padding: 1rem;
+        margin: 1rem;
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .tellSomething {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: lightgoldenrodyellow;
+      margin: 1rem 0.5rem;
+      border-radius: 30px;
+
+      .tellToBootcamps {
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        height: 15vh;
+        border-radius: 60px;
+        background-color: lightblue;
+        text-align: center;
+        justify-content: center; //子元素們水平置中
+        align-items: center; //子元素們垂直置中相較於noteHeader元素
+        margin: 1rem;
+        border: 5px solid black;
+      }
+      .tellContent {
+        border: 2px solid black;
+        border-radius: 30px;
+        border: 2px solid black;
+        // position: relative;
+        z-index: 2;
+        background-color: rgba(141, 231, 231, 0.4);
+        padding: 1rem;
+        margin: 1rem;
+        h2 {
+          font-size: 1.5rem;
+        }
+        //hover樣式改變
+        transition: all 0.5s linear;
+        &:hover {
+          background-color: rgb(249, 203, 112);
+        }
+      }
     }
   }
 }

@@ -1,0 +1,14 @@
+.motivation {
+    display: inline-block;
+
+    width: 50%;
+    //   height: 100px; // 設置高度，確保寬度和高度相等
+    margin: 0rem;
+    padding: 0rem;
+    border-radius: 20px; // 設置圓角，變成圓形
+    text-align: center;
+    background-color: rgb(103, 242, 177);
+    transition: all 0.5s ease-in;
+    h1 {
+      padding: 0.5rem 0;
+    }
